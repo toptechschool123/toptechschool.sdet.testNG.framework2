@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Parameterization Test Suite">
+	<test name="Testing Parameterization">
+	<parameter name="browser" value="chrome"/>
+	<parameter name="username" value="toptechshool"/>
+	<parameter name="password" value="testpassword"/>
+		<classes>
+			<class name="tests.Parameterization" />
+		</classes>
+	</test>
+</suite>

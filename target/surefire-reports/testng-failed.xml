@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Surefire suite]" verbose="0">
+  <test thread-count="5" name="Surefire test(failed)" verbose="0">
+    <classes>
+      <class name="tests.TestNG_Features">
+        <methods>
+          <include name="beforTest"/>
+          <include name="alwaysRun"/>
+          <include name="integration"/>
+          <include name="test"/>
+          <include name="description"/>
+          <include name="user_is_on_test_environment_page"/>
+          <include name="testCaseSkipException"/>
+          <include name="smoke"/>
+          <include name="afterMethod"/>
+          <include name="executetimeOut"/>
+          <include name="runTestMultipleTimes"/>
+          <include name="afterTest"/>
+          <include name="gracefulTearDown"/>
+          <include name="beforeSuite"/>
+          <include name="dividedByZeroExample1"/>
+          <include name="afterClass"/>
+          <include name="afterSuite"/>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- tests.TestNG_Features -->
+      <class name="tests.LoginTest">
+        <methods>
+          <include name="user_is_on_test_environment_page"/>
+          <include name="loginTestPage"/>
+          <include name="gracefulTearDown"/>
+        </methods>
+      </class> <!-- tests.LoginTest -->
+      <class name="tests.RegistrationFormTest">
+        <methods>
+          <include name="initializeWebDriver"/>
+          <include name="close"/>
+          <include name="registrationFormTest"/>
+        </methods>
+      </class> <!-- tests.RegistrationFormTest -->
+      <class name="tests.TestNG_GroupingAndDependency">
+        <methods>
+          <include name="dependsOnMethods"/>
+          <include name="test5"/>
+          <include name="test4"/>
+          <include name="beforeClass"/>
+          <include name="beforTest"/>
+          <include name="afterClass"/>
+          <include name="test2"/>
+          <include name="afterSuite"/>
+          <include name="beforeMethod"/>
+          <include name="test"/>
+          <include name="afterMethod"/>
+          <include name="runTestMultipleTimes"/>
+          <include name="afterTest"/>
+          <include name="gracefulTearDown"/>
+          <include name="beforeSuite"/>
+          <include name="alwaysRun"/>
+          <include name="test1"/>
+          <include name="description"/>
+        </methods>
+      </class> <!-- tests.TestNG_GroupingAndDependency -->
+      <class name="tests.TestNG_Annotations">
+        <methods>
+          <include name="smokeTest2"/>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="aftereSuite"/>
+          <include name="beforTest"/>
+          <include name="smokeTest1"/>
+          <include name="afterMethod"/>
+          <include name="beforeSuite"/>
+          <include name="afterClass"/>
+          <include name="regressionTest1"/>
+          <include name="afterTest"/>
+          <include name="regressionTest2"/>
+        </methods>
+      </class> <!-- tests.TestNG_Annotations -->
+      <class name="tests.DataProviderTest">
+        <methods>
+          <include name="loginToWebPage"/>
+          <include name="tearDwon"/>
+          <include name="test1"/>
+          <include name="webdriverInitializer"/>
+        </methods>
+      </class> <!-- tests.DataProviderTest -->
+    </classes>
+  </test> <!-- Surefire test(failed) -->
+</suite> <!-- Failed suite [Surefire suite] -->

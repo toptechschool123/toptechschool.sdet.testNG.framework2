@@ -1,0 +1,1830 @@
+<html>
+<head>
+<title>TestNG:  Surefire test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Surefire test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/35</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Sep 06 15:49:15 PDT 2023</td>
+</tr>
+<tr><td>Total time:</td><td>7 seconds (7250 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.LoginTest.user_is_on_test_environment_page()'><b>user_is_on_test_environment_page</b><br>Test class: tests.LoginTest</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace325674467", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace325674467'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:652)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.LoginTest@76884e4b</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.TestNG_GroupingAndDependency.beforeMethod()'><b>beforeMethod</b><br>Test class: tests.TestNG_GroupingAndDependency</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_GroupingAndDependency@13d9b21f</td></tr>
+<tr>
+<td title='tests.TestNG_GroupingAndDependency.afterMethod()'><b>afterMethod</b><br>Test class: tests.TestNG_GroupingAndDependency</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_GroupingAndDependency@13d9b21f</td></tr>
+<tr>
+<td title='tests.TestNG_Features.beforTest()'><b>beforTest</b><br>Test class: tests.TestNG_Features</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_Features@5629510</td></tr>
+<tr>
+<td title='tests.TestNG_Features.beforeMethod()'><b>beforeMethod</b><br>Test class: tests.TestNG_Features</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_Features@5629510</td></tr>
+<tr>
+<td title='tests.TestNG_Annotations.beforeClass()'><b>beforeClass</b><br>Test class: tests.TestNG_Annotations</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_Annotations@28ec166e</td></tr>
+<tr>
+<td title='tests.TestNG_Features.beforeMethod()'><b>beforeMethod</b><br>Test class: tests.TestNG_Features</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_Features@5629510</td></tr>
+<tr>
+<td title='tests.TestNG_GroupingAndDependency.afterMethod()'><b>afterMethod</b><br>Test class: tests.TestNG_GroupingAndDependency</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_GroupingAndDependency@13d9b21f</td></tr>
+<tr>
+<td title='tests.TestNG_Features.afterMethod()'><b>afterMethod</b><br>Test class: tests.TestNG_Features</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_Features@5629510</td></tr>
+<tr>
+<td title='tests.TestNG_GroupingAndDependency.beforeMethod()'><b>beforeMethod</b><br>Test class: tests.TestNG_GroupingAndDependency</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_GroupingAndDependency@13d9b21f</td></tr>
+<tr>
+<td title='tests.LoginTest.gracefulTearDown()'><b>gracefulTearDown</b><br>Test class: tests.LoginTest</td>
+<td></td>
+<td>0</td>
+<td>tests.LoginTest@76884e4b</td></tr>
+<tr>
+<td title='tests.TestNG_Features.afterMethod()'><b>afterMethod</b><br>Test class: tests.TestNG_Features</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_Features@5629510</td></tr>
+<tr>
+<td title='tests.TestNG_GroupingAndDependency.beforeMethod()'><b>beforeMethod</b><br>Test class: tests.TestNG_GroupingAndDependency</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_GroupingAndDependency@13d9b21f</td></tr>
+<tr>
+<td title='tests.TestNG_Features.afterMethod()'><b>afterMethod</b><br>Test class: tests.TestNG_Features</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_Features@5629510</td></tr>
+<tr>
+<td title='tests.TestNG_Features.beforeMethod()'><b>beforeMethod</b><br>Test class: tests.TestNG_Features</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_Features@5629510</td></tr>
+<tr>
+<td title='tests.TestNG_GroupingAndDependency.gracefulTearDown()'><b>gracefulTearDown</b><br>Test class: tests.TestNG_GroupingAndDependency</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_GroupingAndDependency@13d9b21f</td></tr>
+<tr>
+<td title='tests.TestNG_Features.beforeMethod()'><b>beforeMethod</b><br>Test class: tests.TestNG_Features</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_Features@5629510</td></tr>
+<tr>
+<td title='tests.TestNG_Features.afterClass()'><b>afterClass</b><br>Test class: tests.TestNG_Features</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_Features@5629510</td></tr>
+<tr>
+<td title='tests.TestNG_GroupingAndDependency.afterMethod()'><b>afterMethod</b><br>Test class: tests.TestNG_GroupingAndDependency</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_GroupingAndDependency@13d9b21f</td></tr>
+<tr>
+<td title='tests.TestNG_Features.afterMethod()'><b>afterMethod</b><br>Test class: tests.TestNG_Features</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_Features@5629510</td></tr>
+<tr>
+<td title='tests.RegistrationFormTest.close()'><b>close</b><br>Test class: tests.RegistrationFormTest</td>
+<td></td>
+<td>0</td>
+<td>tests.RegistrationFormTest@16c63f5</td></tr>
+<tr>
+<td title='tests.TestNG_Features.beforeClass()'><b>beforeClass</b><br>Test class: tests.TestNG_Features</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_Features@5629510</td></tr>
+<tr>
+<td title='tests.TestNG_GroupingAndDependency.afterMethod()'><b>afterMethod</b><br>Test class: tests.TestNG_GroupingAndDependency</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_GroupingAndDependency@13d9b21f</td></tr>
+<tr>
+<td title='tests.TestNG_Features.beforeMethod()'><b>beforeMethod</b><br>Test class: tests.TestNG_Features</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_Features@5629510</td></tr>
+<tr>
+<td title='tests.TestNG_Features.beforeMethod()'><b>beforeMethod</b><br>Test class: tests.TestNG_Features</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_Features@5629510</td></tr>
+<tr>
+<td title='tests.TestNG_Features.beforeMethod()'><b>beforeMethod</b><br>Test class: tests.TestNG_Features</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_Features@5629510</td></tr>
+<tr>
+<td title='tests.RegistrationFormTest.initializeWebDriver()'><b>initializeWebDriver</b><br>Test class: tests.RegistrationFormTest</td>
+<td></td>
+<td>0</td>
+<td>tests.RegistrationFormTest@16c63f5</td></tr>
+<tr>
+<td title='tests.TestNG_GroupingAndDependency.beforTest()'><b>beforTest</b><br>Test class: tests.TestNG_GroupingAndDependency</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_GroupingAndDependency@13d9b21f</td></tr>
+<tr>
+<td title='tests.TestNG_Features.afterMethod()'><b>afterMethod</b><br>Test class: tests.TestNG_Features</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_Features@5629510</td></tr>
+<tr>
+<td title='tests.DataProviderTest.tearDwon()'><b>tearDwon</b><br>Test class: tests.DataProviderTest</td>
+<td></td>
+<td>0</td>
+<td>tests.DataProviderTest@6ad3381f</td></tr>
+<tr>
+<td title='tests.TestNG_Annotations.afterClass()'><b>afterClass</b><br>Test class: tests.TestNG_Annotations</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_Annotations@28ec166e</td></tr>
+<tr>
+<td title='tests.TestNG_GroupingAndDependency.beforeMethod()'><b>beforeMethod</b><br>Test class: tests.TestNG_GroupingAndDependency</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_GroupingAndDependency@13d9b21f</td></tr>
+<tr>
+<td title='tests.TestNG_GroupingAndDependency.beforeMethod()'><b>beforeMethod</b><br>Test class: tests.TestNG_GroupingAndDependency</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_GroupingAndDependency@13d9b21f</td></tr>
+<tr>
+<td title='tests.TestNG_Features.afterMethod()'><b>afterMethod</b><br>Test class: tests.TestNG_Features</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_Features@5629510</td></tr>
+<tr>
+<td title='tests.TestNG_GroupingAndDependency.afterMethod()'><b>afterMethod</b><br>Test class: tests.TestNG_GroupingAndDependency</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_GroupingAndDependency@13d9b21f</td></tr>
+<tr>
+<td title='tests.TestNG_Features.beforeMethod()'><b>beforeMethod</b><br>Test class: tests.TestNG_Features</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_Features@5629510</td></tr>
+<tr>
+<td title='tests.TestNG_GroupingAndDependency.beforeMethod()'><b>beforeMethod</b><br>Test class: tests.TestNG_GroupingAndDependency</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_GroupingAndDependency@13d9b21f</td></tr>
+<tr>
+<td title='tests.TestNG_GroupingAndDependency.afterClass()'><b>afterClass</b><br>Test class: tests.TestNG_GroupingAndDependency</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_GroupingAndDependency@13d9b21f</td></tr>
+<tr>
+<td title='tests.TestNG_GroupingAndDependency.beforeClass()'><b>beforeClass</b><br>Test class: tests.TestNG_GroupingAndDependency</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_GroupingAndDependency@13d9b21f</td></tr>
+<tr>
+<td title='tests.TestNG_GroupingAndDependency.afterMethod()'><b>afterMethod</b><br>Test class: tests.TestNG_GroupingAndDependency</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_GroupingAndDependency@13d9b21f</td></tr>
+<tr>
+<td title='tests.TestNG_Features.afterMethod()'><b>afterMethod</b><br>Test class: tests.TestNG_Features</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_Features@5629510</td></tr>
+<tr>
+<td title='tests.TestNG_GroupingAndDependency.afterMethod()'><b>afterMethod</b><br>Test class: tests.TestNG_GroupingAndDependency</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_GroupingAndDependency@13d9b21f</td></tr>
+<tr>
+<td title='tests.TestNG_Features.afterMethod()'><b>afterMethod</b><br>Test class: tests.TestNG_Features</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_Features@5629510</td></tr>
+<tr>
+<td title='tests.TestNG_GroupingAndDependency.beforeMethod()'><b>beforeMethod</b><br>Test class: tests.TestNG_GroupingAndDependency</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_GroupingAndDependency@13d9b21f</td></tr>
+<tr>
+<td title='tests.TestNG_Features.beforeMethod()'><b>beforeMethod</b><br>Test class: tests.TestNG_Features</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_Features@5629510</td></tr>
+<tr>
+<td title='tests.TestNG_GroupingAndDependency.afterTest()'><b>afterTest</b><br>Test class: tests.TestNG_GroupingAndDependency</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_GroupingAndDependency@13d9b21f</td></tr>
+<tr>
+<td title='tests.TestNG_Features.beforeMethod()'><b>beforeMethod</b><br>Test class: tests.TestNG_Features</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_Features@5629510</td></tr>
+<tr>
+<td title='tests.TestNG_GroupingAndDependency.afterMethod()'><b>afterMethod</b><br>Test class: tests.TestNG_GroupingAndDependency</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_GroupingAndDependency@13d9b21f</td></tr>
+<tr>
+<td title='tests.TestNG_Annotations.afterTest()'><b>afterTest</b><br>Test class: tests.TestNG_Annotations</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_Annotations@28ec166e</td></tr>
+<tr>
+<td title='tests.TestNG_Features.gracefulTearDown()'><b>gracefulTearDown</b><br>Test class: tests.TestNG_Features</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_Features@5629510</td></tr>
+<tr>
+<td title='tests.TestNG_Annotations.beforTest()'><b>beforTest</b><br>Test class: tests.TestNG_Annotations</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_Annotations@28ec166e</td></tr>
+<tr>
+<td title='tests.TestNG_Features.afterMethod()'><b>afterMethod</b><br>Test class: tests.TestNG_Features</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_Features@5629510</td></tr>
+<tr>
+<td title='tests.TestNG_GroupingAndDependency.beforeMethod()'><b>beforeMethod</b><br>Test class: tests.TestNG_GroupingAndDependency</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_GroupingAndDependency@13d9b21f</td></tr>
+<tr>
+<td title='tests.TestNG_Features.afterMethod()'><b>afterMethod</b><br>Test class: tests.TestNG_Features</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_Features@5629510</td></tr>
+<tr>
+<td title='tests.TestNG_Features.afterTest()'><b>afterTest</b><br>Test class: tests.TestNG_Features</td>
+<td></td>
+<td>0</td>
+<td>tests.TestNG_Features@5629510</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='tests.TestNG_GroupingAndDependency.test2()'><b>test2</b><br>Test class: tests.TestNG_GroupingAndDependency</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1312966018", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1312966018'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:652)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.TestNG_GroupingAndDependency@13d9b21f</td></tr>
+<tr>
+<td title='tests.TestNG_GroupingAndDependency.dependsOnMethods()'><b>dependsOnMethods</b><br>Test class: tests.TestNG_GroupingAndDependency</td>
+<td><div><pre>java.lang.Throwable: Method tests.TestNG_GroupingAndDependency.dependsOnMethods() on instance tests.TestNG_GroupingAndDependency@13d9b21f depends on not successfully finished methods 
+[tests.TestNG_GroupingAndDependency.alwaysRun() on instance tests.TestNG_GroupingAndDependency@13d9b21f]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace803149788", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace803149788'><pre>java.lang.Throwable: Method tests.TestNG_GroupingAndDependency.dependsOnMethods() on instance tests.TestNG_GroupingAndDependency@13d9b21f depends on not successfully finished methods 
+[tests.TestNG_GroupingAndDependency.alwaysRun() on instance tests.TestNG_GroupingAndDependency@13d9b21f]
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.TestNG_GroupingAndDependency@13d9b21f</td></tr>
+<tr>
+<td title='tests.TestNG_Features.runTestMultipleTimes()'><b>runTestMultipleTimes</b><br>Test class: tests.TestNG_Features</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1413491716", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1413491716'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:652)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.TestNG_Features@5629510</td></tr>
+<tr>
+<td title='tests.DataProviderTest.loginToWebPage()'><b>loginToWebPage</b><br>Test class: tests.DataProviderTest<br>Parameters: user1, null</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1104938392", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1104938392'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:652)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.DataProviderTest@6ad3381f</td></tr>
+<tr>
+<td title='tests.TestNG_Annotations.smokeTest2()'><b>smokeTest2</b><br>Test class: tests.TestNG_Annotations</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace875865328", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace875865328'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:652)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.TestNG_Annotations@28ec166e</td></tr>
+<tr>
+<td title='tests.TestNG_Features.dividedByZeroExample1()'><b>dividedByZeroExample1</b><br>Test class: tests.TestNG_Features</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace752772379", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace752772379'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:652)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.TestNG_Features@5629510</td></tr>
+<tr>
+<td title='tests.TestNG_GroupingAndDependency.runTestMultipleTimes()'><b>runTestMultipleTimes</b><br>Test class: tests.TestNG_GroupingAndDependency</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1268233170", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1268233170'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:652)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.TestNG_GroupingAndDependency@13d9b21f</td></tr>
+<tr>
+<td title='tests.TestNG_Features.description()'><b>description</b><br>Test class: tests.TestNG_Features<br>Test method: it is not ready yet</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1695213452", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1695213452'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:652)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.TestNG_Features@5629510</td></tr>
+<tr>
+<td title='tests.TestNG_Features.runTestMultipleTimes()'><b>runTestMultipleTimes</b><br>Test class: tests.TestNG_Features</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1058686869", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1058686869'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:652)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.TestNG_Features@5629510</td></tr>
+<tr>
+<td title='tests.DataProviderTest.test1()'><b>test1</b><br>Test class: tests.DataProviderTest<br>Parameters: username1, password1, test1</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2134885423", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2134885423'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:652)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.DataProviderTest@6ad3381f</td></tr>
+<tr>
+<td title='tests.TestNG_Features.testCaseSkipException()'><b>testCaseSkipException</b><br>Test class: tests.TestNG_Features</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace204937701", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace204937701'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:652)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.TestNG_Features@5629510</td></tr>
+<tr>
+<td title='tests.DataProviderTest.loginToWebPage()'><b>loginToWebPage</b><br>Test class: tests.DataProviderTest<br>Parameters: user2, pass2</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace426435961", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace426435961'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:652)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.DataProviderTest@6ad3381f</td></tr>
+<tr>
+<td title='tests.DataProviderTest.loginToWebPage()'><b>loginToWebPage</b><br>Test class: tests.DataProviderTest<br>Parameters: user3, pass3</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1781297535", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1781297535'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:652)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.DataProviderTest@6ad3381f</td></tr>
+<tr>
+<td title='tests.TestNG_Features.test()'><b>test</b><br>Test class: tests.TestNG_Features</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1577067350", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1577067350'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:652)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.TestNG_Features@5629510</td></tr>
+<tr>
+<td title='tests.DataProviderTest.test1()'><b>test1</b><br>Test class: tests.DataProviderTest<br>Parameters: username, password, test</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace639492613", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace639492613'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:652)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.DataProviderTest@6ad3381f</td></tr>
+<tr>
+<td title='tests.RegistrationFormTest.registrationFormTest()'><b>registrationFormTest</b><br>Test class: tests.RegistrationFormTest<br>Parameters: sayedw, sadatw, sayewd@gmail.com, 11111.0, 1123test, 1123test</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1042223174", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1042223174'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:652)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.RegistrationFormTest@16c63f5</td></tr>
+<tr>
+<td title='tests.TestNG_Annotations.regressionTest2()'><b>regressionTest2</b><br>Test class: tests.TestNG_Annotations</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1741997197", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1741997197'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:652)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.TestNG_Annotations@28ec166e</td></tr>
+<tr>
+<td title='tests.LoginTest.loginTestPage()'><b>loginTestPage</b><br>Test class: tests.LoginTest</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace119420356", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace119420356'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:652)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.LoginTest@76884e4b</td></tr>
+<tr>
+<td title='tests.TestNG_GroupingAndDependency.test()'><b>test</b><br>Test class: tests.TestNG_GroupingAndDependency</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace645896037", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace645896037'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:652)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.TestNG_GroupingAndDependency@13d9b21f</td></tr>
+<tr>
+<td title='tests.DataProviderTest.test1()'><b>test1</b><br>Test class: tests.DataProviderTest<br>Parameters: username3, password3, test3</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace216084411", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace216084411'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:652)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.DataProviderTest@6ad3381f</td></tr>
+<tr>
+<td title='tests.DataProviderTest.loginToWebPage()'><b>loginToWebPage</b><br>Test class: tests.DataProviderTest<br>Parameters: user4, pass4</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1099248281", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1099248281'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:652)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.DataProviderTest@6ad3381f</td></tr>
+<tr>
+<td title='tests.TestNG_Annotations.regressionTest1()'><b>regressionTest1</b><br>Test class: tests.TestNG_Annotations</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1529159609", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1529159609'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:652)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.TestNG_Annotations@28ec166e</td></tr>
+<tr>
+<td title='tests.TestNG_Features.executetimeOut()'><b>executetimeOut</b><br>Test class: tests.TestNG_Features</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace28612052", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace28612052'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:652)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.TestNG_Features@5629510</td></tr>
+<tr>
+<td title='tests.TestNG_GroupingAndDependency.runTestMultipleTimes()'><b>runTestMultipleTimes</b><br>Test class: tests.TestNG_GroupingAndDependency</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace157849544", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace157849544'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:652)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.TestNG_GroupingAndDependency@13d9b21f</td></tr>
+<tr>
+<td title='tests.TestNG_GroupingAndDependency.description()'><b>description</b><br>Test class: tests.TestNG_GroupingAndDependency<br>Test method: it is not ready yet</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2106609649", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2106609649'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:652)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.TestNG_GroupingAndDependency@13d9b21f</td></tr>
+<tr>
+<td title='tests.TestNG_GroupingAndDependency.alwaysRun()'><b>alwaysRun</b><br>Test class: tests.TestNG_GroupingAndDependency</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1030014337", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1030014337'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:652)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.TestNG_GroupingAndDependency@13d9b21f</td></tr>
+<tr>
+<td title='tests.TestNG_Features.smoke()'><b>smoke</b><br>Test class: tests.TestNG_Features</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace886341817", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace886341817'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:652)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.TestNG_Features@5629510</td></tr>
+<tr>
+<td title='tests.RegistrationFormTest.registrationFormTest()'><b>registrationFormTest</b><br>Test class: tests.RegistrationFormTest<br>Parameters: tomy, tom, tom@gmail.com, 44444.0, test44, test44</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace602142157", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace602142157'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:652)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.RegistrationFormTest@16c63f5</td></tr>
+<tr>
+<td title='tests.TestNG_GroupingAndDependency.test1()'><b>test1</b><br>Test class: tests.TestNG_GroupingAndDependency</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace53113540", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace53113540'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:652)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.TestNG_GroupingAndDependency@13d9b21f</td></tr>
+<tr>
+<td title='tests.TestNG_GroupingAndDependency.test4()'><b>test4</b><br>Test class: tests.TestNG_GroupingAndDependency</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace289333710", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace289333710'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:652)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.TestNG_GroupingAndDependency@13d9b21f</td></tr>
+<tr>
+<td title='tests.DataProviderTest.test1()'><b>test1</b><br>Test class: tests.DataProviderTest<br>Parameters: username2, password2, test2</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace631349266", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace631349266'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:652)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.DataProviderTest@6ad3381f</td></tr>
+<tr>
+<td title='tests.TestNG_GroupingAndDependency.test5()'><b>test5</b><br>Test class: tests.TestNG_GroupingAndDependency</td>
+<td><div><pre>java.lang.Throwable: Method TestNG_GroupingAndDependency.test5()[pri:0, instance:tests.TestNG_GroupingAndDependency@13d9b21f] depends on not successfully finished methods in group &quot;regression&quot;
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 23 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1515612450", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1515612450'><pre>java.lang.Throwable: Method TestNG_GroupingAndDependency.test5()[pri:0, instance:tests.TestNG_GroupingAndDependency@13d9b21f] depends on not successfully finished methods in group &quot;regression&quot;
+	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:156)
+	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:848)
+	at org.testng.TestRunner.run(TestRunner.java:621)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.TestNG_GroupingAndDependency@13d9b21f</td></tr>
+<tr>
+<td title='tests.TestNG_Annotations.smokeTest1()'><b>smokeTest1</b><br>Test class: tests.TestNG_Annotations</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace584643821", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace584643821'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:652)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.TestNG_Annotations@28ec166e</td></tr>
+<tr>
+<td title='tests.TestNG_Features.alwaysRun()'><b>alwaysRun</b><br>Test class: tests.TestNG_Features</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1880484847", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1880484847'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:652)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.TestNG_Features@5629510</td></tr>
+<tr>
+<td title='tests.TestNG_Features.integration()'><b>integration</b><br>Test class: tests.TestNG_Features</td>
+<td><div><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+... Removed 27 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1899351562", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1899351562'><pre>java.lang.NullPointerException: Cannot invoke &quot;java.util.Properties.getProperty(String)&quot; because &quot;core.BaseClass.properties&quot; is null
+	at core.BaseClass.getBrowserName(BaseClass.java:51)
+	at core.BaseClass.initializeDriver(BaseClass.java:79)
+	at tests.LoginTest.user_is_on_test_environment_page(LoginTest.java:18)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:69)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:390)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:325)
+	at org.testng.TestRunner.invokeTestConfigurations(TestRunner.java:663)
+	at org.testng.TestRunner.beforeRun(TestRunner.java:652)
+	at org.testng.TestRunner.run(TestRunner.java:614)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+	at org.testng.TestNG.runSuites(TestNG.java:1114)
+	at org.testng.TestNG.run(TestNG.java:1082)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
+	at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
+	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
+	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
+</pre></div></td>
+<td>0</td>
+<td>tests.TestNG_Features@5629510</td></tr>
+</table><p>
+</body>
+</html>

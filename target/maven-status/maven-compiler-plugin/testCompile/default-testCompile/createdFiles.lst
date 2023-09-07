@@ -1,0 +1,15 @@
+tests\TestNG_Features.class
+tests_1\DataBase_Runner.class
+tests\Parameterization.class
+tests\Assertion.class
+tests\PreserveClass2.class
+tests\RegistrationFormTest.class
+tests\LoginTest.class
+tests\PreserveClass1.class
+tests\TestNG_Annotations.class
+pageObjects\RegistrationFormPageObjects.class
+tests\Listeners1.class
+tests\DataProviderTest.class
+tests\TestNG_GroupingAndDependency.class
+tests\ParallelExecution.class
+pageObjects\LoginPageObjects.class
