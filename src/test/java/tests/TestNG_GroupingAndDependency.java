@@ -11,10 +11,11 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Ignore;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import core.BaseClass;
-
+@Listeners(utils.Listeners.class)
 public class TestNG_GroupingAndDependency {
 
 	
@@ -72,16 +73,18 @@ public class TestNG_GroupingAndDependency {
 	@Test(groups = {"smoke"})
 	public void test1() {
 		System.out.println("it is groups feature test1");
+		System.out.println(1/0);
 	}
 	
 	@Test(groups = {"smoke"})
 	public void test2() {
 		System.out.println("it is group feature test2");
 	}
-	@Ignore
+	//@Ignore
 	@Test(groups = {"regression"})
 	public void test3() {
 		System.out.println("it is group feature test3");
+		System.out.println(1/0);
 	}
 	
 	@Test(groups = {"regression"})

@@ -6,17 +6,24 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.Ignore;
 import org.testng.annotations.Test;
 
+import core.BaseClass;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import tests_1.DataProviderTestPageObjects;
 
-public class DataProviderTest {
 
+
+
+
+public class DataProviderTest extends BaseClass {
 	public static WebDriver driver;
-
+	
+	
+	
 	@BeforeTest
 	public void webdriverInitializer() {
+		
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions chromeOptions = new ChromeOptions();
 			chromeOptions.addArguments("--start-maximized");
@@ -26,54 +33,28 @@ public class DataProviderTest {
 			 driver.get("https://www.saucedemo.com/");
 	}
 	@Test(dataProvider = "data")
-	public void loginToWebPage(String username, String password) {
+	public void loginToWebPage(String user, String pass) {
 	//	System.out.println(username + "*****" + password);
-
+		
+	
 	}
 
 	@DataProvider(name = "data")
 	public Object dataSet() {
-		Object[][] data = new Object[4][2];  
+		Object[][] data = new Object[2][2];  
 
 		// first row
-		data[0][0] = "user1";
-		data[1][0] = "pass1";
+		data[0][0] = "standard_user";
+		data[1][0] = "secret_sauce";
 
 		// second row
-		data[1][0] = "user2";
-		data[1][1] = "pass2";
+		data[1][0] = "standard_user";
+		data[1][1] = "secret_sauce";
 		// third row
-		data[2][0] = "user3";
-		data[2][1] = "pass3";
-
-		// fourth row
-		data[3][0] = "user4";
-		data[3][1] = "pass4";
-
+		
 		return data;
 
 	}
-
-
-	@Test(dataProvider = "create")
-	public void test1(String username, String password, String test) {
-
-		//System.out.println(username + "***" + password + "***" + test);
-	}
-
- 
-	@DataProvider(name = "create")
-	public Object dataSet1() {
-
-		return new Object[][] { 
-			{ "username", "password", "test" },
-			{ "username1", "password1", "test1" },
-			{ "username2", "password2", "test2" },
-		    { "username3", "password3", "test3" },
-
-		};
-	}
-
 		
 	
 	@AfterTest

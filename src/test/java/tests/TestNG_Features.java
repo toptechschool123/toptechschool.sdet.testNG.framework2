@@ -109,7 +109,7 @@ public class TestNG_Features {
 	}
 
 	
-	@Test(expectedExceptions=ArithmeticException.class)
+	@Test//(expectedExceptions=ArithmeticException.class)
 	public void dividedByZeroExample1() {
 		int e = 1 / 0;
 	}

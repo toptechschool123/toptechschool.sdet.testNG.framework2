@@ -1,4 +1,4 @@
-package tests;
+package utils;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -13,17 +13,17 @@ import org.testng.ITestResult;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import core.BaseClass;
 import io.opentelemetry.exporter.logging.SystemOutLogRecordExporter;
-import utils.DriverUtility;
 
-public class Listeners1 extends BaseClass implements ITestListener{
+public class Listeners extends BaseClass implements ITestListener{
 
 	
-	private static final String OUTPUT_FOLDER = "./build/";
+	private static final String OUTPUT_FOLDER = "./ExtentReport/";
 	private static final String FILE_NAME = "TestExecutionReport.html";
 	
 	private static ExtentReports extent = init();
@@ -43,26 +43,22 @@ public class Listeners1 extends BaseClass implements ITestListener{
 		
 		ExtentSparkReporter sparkReporter = new ExtentSparkReporter (OUTPUT_FOLDER +FILE_NAME );
 		
-		sparkReporter.config().setDocumentTitle("Automation Test Result");
+		sparkReporter.config().setDocumentTitle("Test Result");
 		sparkReporter.config().setReportName("Automation Test Result");
 		sparkReporter.config().setTheme(Theme.DARK);
 		
 		extent = new ExtentReports();
 		extent.attachReporter(sparkReporter);
 		
-		extent.setReportUsesManualConfiguration(true);
-		
 		return extent;
 	}
 	
 	@Override
 	public void onTestStart(ITestResult result) {
-	logger.info("test execution started");
+	
 	String methodName = result.getMethod().getMethodName();
 	
 	System.out.println(methodName +"started!");
-	ExtentTest extentTest = extent.createTest(result.getMethod().getMethodName(),
-	result.getMethod().getDescription());
 	
 	
 	}
@@ -72,23 +68,42 @@ public class Listeners1 extends BaseClass implements ITestListener{
 		
 		logger.info("test passed successfully");
 		logger.info("method name: " + result.getMethod().getMethodName());
-		//test.get().pass("test passed");
-		//test.get().getModel().setEndTime(getTime(result.getEndMillis()));
+		
+		ExtentTest extentTest = extent.createTest(result.getMethod().getMethodName(),
+		
+				result.getMethod().getDescription());
+		
+		extentTest.log(Status.PASS, "test passed");
+
+	
 	}
 
 	@Override
 	public void onTestFailure(ITestResult result) {
 		logger.info("test failed");
 		logger.info("method name : " + result.getMethod().getMethodName());
-		test.get().info("test failed");
-		test.get().getModel().setEndTime(getTime(result.getEndMillis()));
-		DriverUtility.screenShot();
+		
+
+		ExtentTest extentTest = extent.createTest(result.getMethod().getMethodName(),
+		
+		result.getMethod().getDescription());
+		extentTest.log(Status.FAIL, "test failed");
+		//extentTest.assignAuthor("Sayed Sadat");
+		//extentTest.assignCategory("smoke test");
+		//extentTest.assignCategory("regression");
+		//test.get().info("test failed");
+	//	test.get().getModel().setEndTime(getTime(result.getEndMillis()));
+		//DriverUtility.screenShot();
 	}
 
 	@Override
 	public void onTestSkipped(ITestResult result) {
 		System.out.println(result.getMethod().getMethodName() + " skipped!");
 		logger.info("method name" + result.getMethod().getMethodName());
+		
+		ExtentTest extentTest = extent.createTest(result.getMethod().getMethodName(),
+				result.getMethod().getDescription());
+				extentTest.log(Status.SKIP, "test skipped");
 		
 	}
 
@@ -113,7 +128,9 @@ public class Listeners1 extends BaseClass implements ITestListener{
 	@Override
 	public void onFinish(ITestContext context) {
 		logger.info(" end of execution");
+		
 		extent.flush();
+		
 		test.remove();
 	}
 	
@@ -126,6 +143,6 @@ public class Listeners1 extends BaseClass implements ITestListener{
 
 
 	}
-	
+
 
 

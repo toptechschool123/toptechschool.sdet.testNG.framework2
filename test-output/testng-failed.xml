@@ -5,9 +5,11 @@
     <classes>
       <class name="tests.LoginTest">
         <methods>
+          <include name="assertionFalse"/>
           <include name="user_is_on_test_environment_page"/>
-          <include name="loginTestPage"/>
           <include name="gracefulTearDown"/>
+          <include name="exceptionFail"/>
+          <include name="skipException"/>
         </methods>
       </class> <!-- tests.LoginTest -->
     </classes>

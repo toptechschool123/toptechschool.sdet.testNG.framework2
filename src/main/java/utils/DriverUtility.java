@@ -12,6 +12,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -25,7 +26,8 @@ import core.BaseClass;
 
 public class DriverUtility extends BaseClass {
 
-	
+
+
 	// utility method to select from dropdown by visible text
 
 	public static void selectByVisibleText(WebElement ele, String text) {

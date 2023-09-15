@@ -12,10 +12,11 @@ import org.testng.annotations.BeforeGroups;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import core.BaseClass;
-
+@Listeners(utils.Listeners.class)
 public class TestNG_Annotations extends BaseClass {
 	
 	@BeforeSuite
@@ -79,6 +80,7 @@ public class TestNG_Annotations extends BaseClass {
 	@Test
 	public void regressionTest2() {
 		System.out.println("it is regresion test 2");
+		System.out.println(1/0);
 	}
 
 }

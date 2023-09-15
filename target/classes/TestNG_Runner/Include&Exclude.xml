@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Sample Test Suite" verbose="1" >
+  <test name="Method Test Cases" >
+    <classes>
+       <class name="tests.TestNG_Annotations">
+        <methods>
+        <include name="smokeTest1" />
+        <include name="smokeTest2" />
+        <exclude name="regressionTest1" />
+      </methods>
+       </class>
+    </classes>
+  </test>
+</suite>

@@ -5,23 +5,24 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class Parameterization {
+import core.BaseClass;
+
+public class Parameterization extends BaseClass {
 
 	@BeforeTest
 	public void beforeTest() {
 		
+		BaseClass.initializeDriver();
 		
 	}
 
-	@Parameters({ "browser" })
+	
+	
+	
+	@Parameters({ "browser","username", "password" })
 	@Test
-	public void testCaseOne(String browser) {
-		System.out.println("browser passed as : " + browser);
-	}
-
-	@Parameters({ "username", "password" })
-	@Test
-	public void testCaseTwo(String username, String password) {
+	public void testCaseTwo(String browser , String username, String password) {
+		System.out.println("Parameter for browser is : " + browser);
 		System.out.println("Parameter for User Name passed as : " + username);
 		System.out.println("Parameter for Password passed as :" + password);
 	}
